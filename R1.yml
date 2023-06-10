@@ -1,20 +1,10 @@
 ---
-- name: config
-  hosts: R1
-  connection: local
-  gather_facts: no
-  tasks:
-    - name: configure provider
-      set_fact:
-        provider:
-          username: sistel
-          password: sistel
 
-    - name: configure top level configuration
-      ios_config:
-        lines: hostname {{ inventory_hostname }}
-        timeout: 30
-        provider: "{{provider}}"
+- name: Konfigurasi Router 1
+  connection: ansible.netcommon.network_cli
+  gather_facts: false
+  hosts: R1
+  tasks:
 
   roles:
     - r1_ip

@@ -1,22 +1,36 @@
 ---
-- name: interface IP address
-  ios_config:
-    provider:
-      username: sistel
-      password: sistel
-    timeout: 30
-    lines:
-      - ip address 10.10.10.1 255.255.255.0
-      - no shutdown
-    parents: interface GigabitEthernet 0/1
+    - name: Configure top level configuration
+      cisco.ios.ios_config:
+        lines: hostname {{ inventory_hostname }}
 
-- name: interface IP address
-  ios_config:
-    provider:
-      username: sistel
-      password: sistel
-    timeout: 30
-    lines:
-      - ip address 192.168.10.1 255.255.255.0
-      - no shutdown
-    parents: interface GigabitEthernet 0/2
+    - name: interface IP address
+      cisco.ios.ios_config:
+        lines:
+        - no switchport
+        - ip address 10.10.10.1 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet1/0
+
+    - name: interface IP address
+      cisco.ios.ios_config:
+        lines:
+        - no switchport
+        - ip address 10.10.11.1 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet1/1
+
+    - name: interface IP address
+      cisco.ios.ios_config:
+        lines:
+        - no switchport
+        - ip address 10.10.12.1 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet1/2
+
+    - name: interface IP address
+      cisco.ios.ios_config:
+        lines:
+        - no switchport
+        - ip address 10.10.13.1 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet1/3

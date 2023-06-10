@@ -7,7 +7,7 @@
       cisco.ios.ios_config:
         lines:
         - no switchport
-        - ip address 10.10.11.2 255.255.255.0
+        - ip address 10.10.13.2 255.255.255.0
         - no shutdown
         parents: interface FastEthernet1/0
 
@@ -15,7 +15,7 @@
       cisco.ios.ios_config:
         lines:
         - no switchport
-        - ip address 10.10.14.2 255.255.255.0
+        - ip address 10.10.16.2 255.255.255.0
         - no shutdown
         parents: interface FastEthernet1/1
 
@@ -23,7 +23,7 @@
       cisco.ios.ios_config:
         lines:
         - no switchport
-        - ip address 10.10.17.1 255.255.255.0
+        - ip address 10.10.18.2 255.255.255.0
         - no shutdown
         parents: interface FastEthernet1/2
 
@@ -31,6 +31,6 @@
       cisco.ios.ios_config:
         lines:
         - no switchport
-        - ip address 10.10.18.1 255.255.255.0
+        - ip address 10.10.19.2 255.255.255.0
         - no shutdown
         parents: interface FastEthernet1/3

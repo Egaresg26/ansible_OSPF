@@ -1,0 +1,36 @@
+---
+    - name: Configure top level configuration
+      cisco.ios.ios_config:
+        lines: hostname {{ inventory_hostname }}
+
+    - name: interface IP address
+      cisco.ios.ios_config:
+        lines:
+        - no switchport
+        - ip address 10.10.12.2 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet1/0
+
+    - name: interface IP address
+      cisco.ios.ios_config:
+        lines:
+        - no switchport
+        - ip address 10.20.15.2 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet1/1
+
+    - name: interface IP address
+      cisco.ios.ios_config:
+        lines:
+        - no switchport
+        - ip address 10.20.17.2 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet1/2
+
+    - name: interface IP address
+      cisco.ios.ios_config:
+        lines:
+        - no switchport
+        - ip address 10.20.19.1 255.255.255.0
+        - no shutdown
+        parents: interface FastEthernet1/3

@@ -1,11 +1,11 @@
 ---
 
-- name: Konfigurasi Router 5
+- name: Konfigurasi Router 1
   connection: ansible.netcommon.network_cli
   gather_facts: false
-  hosts: R5
+  hosts: R1
   tasks:
 
   roles:
-    - r5_ip
-    - r5_ospf
+    - r1_ipa
+    - r1_ospfa

@@ -1,9 +1,0 @@
----
-- name: Konfigurasi 5 Router
-  hosts: all
-    
-- include: R1.yml
-- include: R2.yml
-- include: R3.yml
-- include: R4.yml
-- include: R5.yml

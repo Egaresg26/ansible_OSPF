@@ -7,5 +7,5 @@
   tasks:
 
   roles:
-    - r4_ip
-    - r4_ospf
+    - r4_ipa
+    - r4_ospfa

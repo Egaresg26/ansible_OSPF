@@ -1,0 +1,9 @@
+---
+- name: Konfigurasi 5 Router
+  hosts: all
+
+- import_playbook: R1A.yml
+- import_playbook: R2A.yml
+- import_playbook: R3A.yml
+- import_playbook: R4A.yml
+- import_playbook: R5A.yml

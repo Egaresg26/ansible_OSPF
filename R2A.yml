@@ -1,0 +1,11 @@
+---
+
+- name: Konfigurasi Router 2
+  connection: ansible.netcommon.network_cli
+  gather_facts: false
+  hosts: R2
+  tasks:
+
+  roles:
+    - r2_ipa
+    - r2_ospfa

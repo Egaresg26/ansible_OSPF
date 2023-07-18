@@ -1,0 +1,9 @@
+---
+- name: Set OSPF configuration
+  cisco.ios.ios_config:
+    lines:
+    - netw 10.20.14.0 0.0.0.255 area 1
+    - netw 10.10.11.0 0.0.0.255 area 1
+    - netw 10.20.17.0 0.0.0.255 area 1
+    - netw 10.20.18.0 0.0.0.255 area 1
+    parents: router ospf 1
